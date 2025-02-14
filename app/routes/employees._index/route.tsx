@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router"
 import { getDB } from "~/db/getDB"
+import { useState } from "react" ;
 
 export async function loader() {
   const db = await getDB()
@@ -8,12 +9,19 @@ export async function loader() {
   return { employees }
 }
 
+
 export default function EmployeesPage() {
   const { employees } = useLoaderData()
   return (
+
     <div>
+
+      <input type="text" placeholder="Search Employees" />
+
       <div>
         {employees.map((employee: any) => (
+
+
           <div>
             <ul>
               <li>Employee #{employee.id}</li>
@@ -22,6 +30,7 @@ export default function EmployeesPage() {
               </ul>
             </ul>
           </div>
+
         ))}
       </div>
       <hr />
@@ -30,5 +39,9 @@ export default function EmployeesPage() {
         <li><a href="/timesheets/">Timesheets</a></li>
       </ul>
     </div>
+    
   )
 }
+<table>
+  <tr><td>testing</td></tr>
+</table>

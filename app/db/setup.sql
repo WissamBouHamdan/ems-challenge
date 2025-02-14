@@ -15,12 +15,23 @@ DROP TABLE IF EXISTS timesheets;
 --     datetime_field DATETIME
 -- );
 
--- Create employees table
+Create employees table
 CREATE TABLE employees (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     full_name TEXT NULL
-    -- Rest of the fields
+    email TEXT NULL
+    phone_number TEXT NULL
+    dob TEXT NULL
+    jobtitle TEXT NULL
+    department TEXT NULL
+    salary INTEGER NULL
+    startdate TEXT NULL
+    enddate TEXT NULL
+
+    
+    
 );
+
 
 -- Create timesheets table
 CREATE TABLE timesheets (

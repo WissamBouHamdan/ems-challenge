@@ -9,7 +9,7 @@ export default function EmployeePage() {
         To implement
       </div>
       <ul>
-        <li><a href="/employees">Employees</a></li>
+        <li><a href="/employees">Employeesaaa</a></li>
         <li><a href="/employees/new">New Employee</a></li>
         <li><a href="/timesheets/">Timesheets</a></li>
       </ul>
