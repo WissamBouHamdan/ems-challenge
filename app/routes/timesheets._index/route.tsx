@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router";
 import { useState } from "react";
 import { getDB } from "~/db/getDB";
+import { table } from "console";
+
 
 export async function loader() {
   const db = await getDB();
@@ -13,6 +15,8 @@ export async function loader() {
 
 export default function TimesheetsPage() {
   const { timesheetsAndEmployees } = useLoaderData();
+  const [viewMode,setViewMode] = useState <'table'|'calendar'>('table');
+  const [searchTerm, setSearchTerm]= useState('');
 
   return (
     <div>
